@@ -19,6 +19,9 @@ First, You should enter 52.231.200.54 and then sign up.<br>
 Second, Sign in and Make team and projects.<br>
 Third, Setting up your project and Define rules.
 ***
+### Project Architecture
+![Project Architecture](/resources/img/architecture.png)
+***
 ### Related Projects
 + [Sonarqube](https://www.sonarqube.org/) for Coding Convention
 + [Ace](https://ace.c9.io/) for Syntax Highlight.
