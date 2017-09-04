@@ -5,7 +5,7 @@ StyleIDE has features of coding convention and code review.<br>
 This uses sonarqube for code-convention and ACE IDE for syntax highlight.<br>
 This requires a php development environment like a ap0.msetup or autoset.<br>
 Code Review consists of PostIt, Highlight, Add Comment and Coding Convention cosnsits of History, Alaram, Schedule Management.<br>
-![Sample Image](/resources/img/sample-main.png).
+![Sample Image](/resources/img/feature.png).
 ***
 ### What is Coding Convention
 [Coding conventions](https://en.wikipedia.org/wiki/Coding_conventions) are a set of guidelines for a specific programming language that recommend programming style, practices, and methods for each aspect of a program written in that language ...
@@ -18,6 +18,9 @@ This is not completed now. It requires updates many times.
 First, You should enter 52.231.200.54 and then sign up.<br>
 Second, Sign in and Make team and projects.<br>
 Third, Setting up your project and Define rules.
+***
+### Project Architecture
+![Project Architecture](/resources/img/architecture.png)
 ***
 ### Related Projects
 + [Sonarqube](https://www.sonarqube.org/) for Coding Convention
