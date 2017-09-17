@@ -1,0 +1,17 @@
+<html>
+<head>1
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script></head>
+<body>
+  <input type="checkbox" id="isAgeSelected"/>
+  <div id="txtAge" style="display:none">Age is something</div>
+
+
+  <script>
+  $('#isAgeSelected').click(function() {
+    $("#txtAge").toggle(this.checked);
+});
+  </script>
+
+
+</body>
+</html>
