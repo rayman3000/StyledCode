@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="StyleIDE">
+    <meta name="keyword" content="sprint, sprint-plan, agile">
+    
+    <title>StyleIDE - Sprint Plan</title>
+
+    <!-- <link rel="stylesheet" href="lib/Bootstrap/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
+    <link rel="stylesheet" href="assets/css/sprint-plan.css" />
+</head>
+
+<body class="well">
+    <div id="container">
+
+        <div id="header">Sprint Plan</div>
+
+        <div class="task-list task-container" id="pending">
+            <h3>Pending</h3>
+        </div>
+
+        <div class="task-list task-container" id="inProgress">
+            <h3>In Progress</h3>
+        </div>
+
+        <div class="task-list task-container" id="completed">
+            <h3>Completed</h3>
+        </div>
+
+        <div class="task-list">
+            <h3>Add a task</h3>
+            <form id="todo-form">
+                <input type="text" placeholder="Title" />
+                <textarea placeholder="Description"></textarea>
+                <div class="input-group date" data-provide="datepicker">
+                    <input type="text" class="form-control">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-th"></span>
+                    </div>
+                </div>
+                <input type="button" class="btn btn-primary" value="Add Task" onclick="todo.add();" />
+            </form>
+
+            <input type="button" class="btn btn-primary" value="Clear Data" onclick="todo.clear();" />
+
+            <div id="delete-div">
+                Drag Here to Delete
+            </div>
+        </div>
+
+        <div style="clear:both;"></div>
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+        <script src="lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+        <script src="assets/js/sprint-plan.js"></script>
+
+        <script>
+            $( "#datepicker" ).datepicker();
+            $( "#datepicker" ).datepicker("option", "dateFormat", "dd/mm/yy");
+
+            $(".task-container").droppable();
+            $(".todo-task").draggable({ revert: "valid", revertDuration:200 });
+            todo.init();
+        </script>
+
+    </div>
+</body>
+</html>

@@ -2,30 +2,19 @@
   "name": "styleide",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MunSeongUk/StyleIDE.git"
-  },
-  "keywords": [
-    "IDE",
-    "Coding",
-    "Convention",
-    "Code",
-    "review",
-    "cloud"
-  ],
-  "author": "",
+  "author": "Mun Seong Uk",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/MunSeongUk/StyleIDE/issues"
-  },
-  "homepage": "https://github.com/MunSeongUk/StyleIDE#readme",
   "dependencies": {
-    "body-parser": "^1.18.0",
-    "express": "^4.15.4"
+    "bootstrap": "^3.3.7",
+    "bootstrap-datepicker": "^1.7.1",
+    "dcjqaccordion": "^2.7.1",
+    "jquery": "^3.2.1",
+    "jquery.backstretch": "^2.1.15",
+    "jquery.scrollto": "^2.1.2",
+    "nicescroll": "^3.7.4"
   }
 }

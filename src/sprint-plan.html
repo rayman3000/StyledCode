@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, IDE, SonarQubr">
+    <link rel="shortcut icon" href="assets/img/logo/favicon.png">
+
+    <!-- Bootstrap core CSS -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--external css-->
+    <link href="lib/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="lib/lineicons/style.css">
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style-responsive.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/sprint-plan.css" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <title>StyleIDE</title>
+</head>
+
+<body>
+    <section id="container">
+    <!-- **********************************************************************************************************************************************************
+    TOP BAR CONTENT & NOTIFICATIONS
+    *********************************************************************************************************************************************************** -->
+        <!--header start-->
+        <header class="header black-bg">
+            <div class="sidebar-toggle-box">
+                <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+            </div>
+            <!--logo start-->
+            <a href="index.html" class="logo"><b>DASHBOARD</b></a>
+            <!--logo end-->
+            <div class="nav notify-row" id="top_menu">
+                <!--  notification start -->
+                <ul class="nav top-menu">
+                    <!-- settings start -->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                            <i class="fa fa-tasks"></i>
+                            <span class="badge bg-theme">6</span>
+                        </a>
+                        <ul class="dropdown-menu extended tasks-bar">
+                            <div class="notify-arrow notify-arrow-green"></div>
+                            <li>
+                                <p class="green">You have 4 pending tasks</p>
+                            </li>
+                            <li>
+                                <a href="index.html#">
+                                    <div class="task-info">
+                                        <div class="desc">DashGum Admin Panel</div>
+                                        <div class="percent">40%</div>
+                                    </div>
+                                    <div class="progress progress-striped">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                            <span class="sr-only">40% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#">
+                                    <div class="task-info">
+                                        <div class="desc">Database Update</div>
+                                        <div class="percent">60%</div>
+                                    </div>
+                                    <div class="progress progress-striped">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (warning)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#">
+                                    <div class="task-info">
+                                        <div class="desc">Product Development</div>
+                                        <div class="percent">80%</div>
+                                    </div>
+                                    <div class="progress progress-striped">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                            <span class="sr-only">80% Complete</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#">
+                                    <div class="task-info">
+                                        <div class="desc">Payments Sent</div>
+                                        <div class="percent">70%</div>
+                                    </div>
+                                    <div class="progress progress-striped">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                                            <span class="sr-only">70% Complete (Important)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="external">
+                                <a href="#">See All Tasks</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- settings end -->
+
+                    <!-- inbox dropdown start-->
+                    <li id="header_inbox_bar" class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="badge bg-theme">5</span>
+                        </a>
+                        <ul class="dropdown-menu extended inbox">
+                            <div class="notify-arrow notify-arrow-green"></div>
+                            <li>
+                                <p class="green">You have 5 new messages</p>
+                            </li>
+                            <li>
+                                <a href="index.html#">
+                                    <span class="photo"><img alt="avatar" src="assets/img/ui-zac.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Zac Snider</span>
+                                    <span class="time">Just now</span>
+                                    </span>
+                                    <span class="message">
+                                        Hi mate, how is everything?
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#">
+                                    <span class="photo"><img alt="avatar" src="assets/img/ui-divya.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Divya Manian</span>
+                                    <span class="time">40 mins.</span>
+                                    </span>
+                                    <span class="message">
+                                        Hi, I need your help with this.
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#">
+                                    <span class="photo"><img alt="avatar" src="assets/img/ui-danro.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Dan Rogers</span>
+                                    <span class="time">2 hrs.</span>
+                                    </span>
+                                    <span class="message">
+                                        Love your new Dashboard.
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#">
+                                    <span class="photo"><img alt="avatar" src="assets/img/ui-sherman.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Dj Sherman</span>
+                                    <span class="time">4 hrs.</span>
+                                    </span>
+                                    <span class="message">
+                                        Please, answer asap.
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#">See all messages</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- inbox dropdown end -->
+
+                    <li id="header_inbox_bar">
+                        <a href="lock_screen.html">
+                            <i class="fa fa-lock"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!--  notification end -->
+            </div>
+            <div class="top-menu">
+                <ul class="nav pull-right top-menu">
+                    <li><a class="logout" href="login.html">Logout</a></li>
+                </ul>
+            </div>
+        </header>
+        <!--header end-->
+
+        <!-- **********************************************************************************************************************************************************
+        MAIN SIDEBAR MENU
+        *********************************************************************************************************************************************************** -->
+        <!--sidebar start-->
+        <aside>
+            <div id="sidebar"  class="nav-collapse ">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu" id="nav-accordion">
+                    <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+                    <h5 class="centered">test name</h5>
+                          
+                    <li class="mt">
+                        <a href="index.html">
+                            <i class="fa fa-dashboard"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+  
+                    <li class="sub-menu">
+                        <a href="javascript:;" >
+                            <i class="fa fa-desktop"></i>
+                            <span>Code</span>
+                        </a>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" >
+                            <i class="fa fa-bar-chart"></i>
+                            <span>Coding Convention</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a  href="form_component.html">Rule Setting</a></li>
+                            <li><a  href="advanced_form_components.html">Rule Docs</a></li>
+                            <li><a  href="form_validation.html">Report from Sonar</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" >
+                            <i class="fa fa-file-code-o"></i>
+                            <span>Code Review</span>
+                        </a>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" >
+                            <i class="fa fa-users"></i>
+                            <span>Account & Team</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a  href="blank.html">Edit profile</a></li>
+                            <li><a  href="login.html">Team setting</a></li>
+                            <li><a  href="lock_screen.html">Message</a></li>
+                            <li><a  href="lock_screen.html">Chat Room</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a class="active" href="javascript:;" >
+                            <i class="fa fa-cogs"></i>
+                            <span>Agile Setting</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a  href="dropzone.html">Issue</a></li>
+                            <li class="active"><a  href="sprint-plan.html">Sprint Plan</a></li>
+                            <li><a  href="todo_list.html">Calendar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- sidebar menu end-->
+            </div>
+        </aside>
+        <!--sidebar end-->
+
+        <!-- **********************************************************************************************************************************************************
+        MAIN CONTENT
+        *********************************************************************************************************************************************************** -->
+        <!--main content start-->
+        <section id="main-content">
+            <section class="wrapper">
+                <div class="row">
+                    <div class="row mt">
+                        <div class="col-md-12">
+                            <section class="task-panel tasks-widget">
+                              <div class="panel-heading">
+                                  <div class="pull-left"><h5><i class="fa fa-tasks"></i> Todo List - Sortable Style</h5></div>
+                                  <br>
+                               </div>
+                                <div class="panel-body">
+                                    <div class="task-content">
+                                        <ul id="sortable" class="task-list">
+                                            <li class="list-primary">
+                                                <i class=" fa fa-ellipsis-v"></i>
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" class="list-child" value=""  />
+                                                </div>
+                                                <div class="task-title">
+                                                    <span class="task-title-sp">Dashgum - Admin Panel Theme</span>
+                                                    <span class="badge bg-theme">Done</span>
+                                                    <div class="pull-right hidden-phone">
+                                                        <button class="btn btn-success btn-xs fa fa-check"></button>
+                                                        <button class="btn btn-primary btn-xs fa fa-pencil"></button>
+                                                        <button class="btn btn-danger btn-xs fa fa-trash-o"></button>
+                                                    </div>
+                                                </div>
+                                            </li>
+      
+                                            <li class="list-danger">
+                                                <i class=" fa fa-ellipsis-v"></i>
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" class="list-child" value=""  />
+                                                </div>
+                                                <div class="task-title">
+                                                    <span class="task-title-sp">Extensive collection of plugins</span>
+                                                    <span class="badge bg-warning">Cool</span>
+                                                    <div class="pull-right hidden-phone">
+                                                        <button class="btn btn-success btn-xs fa fa-check"></button>
+                                                        <button class="btn btn-primary btn-xs fa fa-pencil"></button>
+                                                        <button class="btn btn-danger btn-xs fa fa-trash-o"></button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-success">
+                                                <i class=" fa fa-ellipsis-v"></i>
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" class="list-child" value=""  />
+                                                </div>
+                                                <div class="task-title">
+                                                    <span class="task-title-sp">Free updates always, no extra fees.</span>
+                                                    <span class="badge bg-success">2 Days</span>
+                                                    <div class="pull-right hidden-phone">
+                                                        <button class="btn btn-success btn-xs fa fa-check"></button>
+                                                        <button class="btn btn-primary btn-xs fa fa-pencil"></button>
+                                                        <button class="btn btn-danger btn-xs fa fa-trash-o"></button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-warning">
+                                                <i class=" fa fa-ellipsis-v"></i>
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" class="list-child" value=""  />
+                                                </div>
+                                                <div class="task-title">
+                                                    <span class="task-title-sp">More features coming soon</span>
+                                                    <span class="badge bg-info">Tomorrow</span>
+                                                    <div class="pull-right hidden-phone">
+                                                        <button class="btn btn-success btn-xs fa fa-check"></button>
+                                                        <button class="btn btn-primary btn-xs fa fa-pencil"></button>
+                                                        <button class="btn btn-danger btn-xs fa fa-trash-o"></button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-info">
+                                                <i class=" fa fa-ellipsis-v"></i>
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" class="list-child" value=""  />
+                                                </div>
+                                                <div class="task-title">
+                                                    <span class="task-title-sp">Hey, seriously, you should buy this Dashboard</span>
+                                                    <span class="badge bg-important">Now</span>
+                                                    <div class="pull-right hidden-phone">
+                                                        <button class="btn btn-success btn-xs fa fa-check"></button>
+                                                        <button class="btn btn-primary btn-xs fa fa-pencil"></button>
+                                                        <button class="btn btn-danger btn-xs fa fa-trash-o"></button>
+                                                    </div>
+                                                </div>
+                                            </li>
+      
+                                        </ul>
+                                    </div>
+                                    <div class=" add-task-row">
+                                        <a id="addNewTask" class="btn btn-success btn-sm pull-left" data-toggle="modal" href="#myModal">Add New Tasks</a>
+                                        <a class="btn btn-default btn-sm pull-right" href="todo_list.html#">See All Tasks</a>
+                                    </div>
+                                </div>
+
+                                <!-- Modal -->
+                                <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                    <h4 class="modal-title">Welcome Back</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p class="centered"><img class="img-circle" width="80" src="assets/img/ui-sam.jpg"></p>
+                                                    <input type="password" name="password" placeholder="Password" autocomplete="off" class="form-control placeholder-no-fix">				
+                                                </div>
+                                                <div class="modal-footer centered">
+                                                    <button id="unLock" class="btn btn-theme03" type="button">Unlock</button>
+                                                    <button data-dismiss="modal" class="btn btn-theme04" type="button">Cancel</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- modal -->
+                            </section>
+                        </div><!--/col-md-12 -->
+                    </div><!-- /row -->
+
+                    <div class="row mt mb">
+                        <div class="col-md-4 mb" id=pending>
+                            <div class="white-panel pn">
+                                <h3>Pending</h3>
+                            </div>
+                        </div>
+                
+                        <div class="col-md-4 mb" id="inProgress">
+                            <div class="white-panel pn">
+                                <h3>In Progress</h3>
+                            </div>
+                        </div>
+                
+                        <div class="col-md-4 mb" id="completed">
+                            <div class="white-panel pn">
+                                <h3>Completed</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- row end -->
+            </section>
+        </section>
+        <!--footer start-->
+        <footer class="site-footer">
+            <div class="text-center">
+                If you have any question : bulgogi1216@naver.com
+                <a href="sprint-plan.html#" class="go-top">
+                    <i class="fa fa-angle-up"></i>
+                </a>
+            </div>
+        </footer>
+        <!--footer end-->
+    </section>
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src='node_modules/dcjqaccordion/js/jquery.cookie.js'></script>
+    <script src='node_modules/dcjqaccordion/js/jquery.hoverIntent.minified.js'></script>
+    <script class="include" src="node_modules/dcjqaccordion/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="node_modules/jquery.scrollto/jquery.scrollTo.min.js"></script>
+    <script src="node_modules/nicescroll/dist/jquery.nicescroll.min.js" type="text/javascript"></script>
+
+    <!--common script for all pages-->
+    <script src="lib/common-scripts/common-scripts.js"></script>
+
+    <!--script for this page-->
+	<script src="lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="assets/js/sprint-plan.js"></script>
+    
+    <script>
+        jQuery(document).ready(function() {
+            TaskList.initTaskWidget();
+        });
+
+        $(function() {
+            $( "#sortable" ).sortable();
+            $( "#sortable" ).disableSelection();
+        });
+    </script>
+</body>
+</html>
