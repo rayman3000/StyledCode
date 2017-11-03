@@ -1,10 +1,10 @@
 <?php 
 
 
-$host = "localhost"; 
-$user = "postgres"; 
-$pass = "1234"; 
-$db = "sonar";
+$host = "styledcode-postgresqldbserver.postgres.database.azure.com"; 
+$user = "bulgogi1216@styledcode-postgresqldbserver"; 
+$pass = "seong!UK$91"; 
+$db = "styledcode_postgresqldb";
 $port = "5432";
 $num = array();
 $test = array();    
