@@ -3418,3 +3418,81 @@ ul.chat-available-user li a:hover {
 }
 
 
+/*170923*/
+.nav_bar {
+	margin:auto;
+	border-bottom: 2px solid #000000;
+	padding-bottom: 10px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.nav_bar ul {
+	/*padding: 0;*/
+	padding-bottom: 10px;
+	list-style: none;
+}
+.nav_bar ul li {
+	float: left;
+	font-size: 16px;
+	font-weight: bold;
+	margin-right: 10px;
+}
+.nav_bar ul li a {
+	text-decoration: none;
+	color: #000000;
+	background: #ffd777;
+	border: 1px solid #000000;
+	border-botom: none;
+	padding: 10px 10px 10px 10px;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-top-left-radius: 10px;
+	text-align: center;
+}
+.nav_bar ul li a:hover {
+	text-decoration: none;
+	color: #000000;
+	background: #96e0e9;
+	-webkit-transition: background-color 200ms ease-in;
+	-moz-transition: background-color 200ms ease-in;
+	-ms-transition: background-color 200ms ease-in;
+	-o-transition: background-color 200ms ease-in;
+	transition: background-color 200ms ease-in;
+}
+.nav_bar ul li a#onlink {
+	background: #ffffff;
+	color: #000000;
+	border-bottom: 2px solid #ffffff;
+}
+.nav_bar ul li a#onlink:hover {
+	background: #ffffff;
+	color: #000000;
+}
+.inline-ul {
+	padding-bottom: 20px;
+}
+.inline-ul li {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.col-lg-6, .col-md-6, .col-sm-12 ul {
+	-webkit-padding-start: 5px;
+}
+.col-lg-6, .col-md-6, .col-sm-12 ul li {
+	float: left;
+}
+.footerbuttons ul li{
+	float: left;
+	text-align: center;
+	padding-top: 20px;
+	padding-right: 5px;
+	color: #000000;
+}
+.footerbuttons{
+	float: right;
+	padding-left: 200px;
+}
+.footerbuttons ul li button {
+	width : 80px;
+}

@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    $email = $_SESSION['email'];
+?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -205,7 +209,7 @@
                 <!-- sidebar menu start-->
                 <ul class="sidebar-menu" id="nav-accordion">
                     <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-                    <h5 class="centered">test name</h5>
+                    <h5 class="centered"><?=$email?></h5>
                           
                     <li class="mt">
                         <a href="index.html">
@@ -260,6 +264,24 @@
                             <li><a  href="todo_list.html">Calendar</a></li>
                         </ul>
                     </li>
+					<li class="sub-menu">
+			<a href="ManageProject.html">
+				<i class="fa fa-desktop"></i>
+				<span>ManageProject</span>
+			</a>
+		</li>
+		<li class="sub-menu">
+			<a href="lobby.html">
+				<i class="fa fa-comments-o"></i>
+				<span>Chat Room</span>
+			</a>
+		</li>
+		<li class="sub-menu">
+			<a href="Scheduler.html">
+				<i class="fa fa-tasks"></i>
+				<span>Scheduler</span>
+			</a>
+		</li>
                 </ul>
                 <!-- sidebar menu end-->
             </div>
