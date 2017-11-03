@@ -199,7 +199,7 @@ session_start();
       MAIN SIDEBAR MENU
       *********************************************************************************************************************************************************** -->
             <!--sidebar start-->
-                  <aside>
+            <aside>
             <div id="sidebar"  class="nav-collapse ">
                 <!-- sidebar menu start-->
                 <ul class="sidebar-menu" id="nav-accordion">
@@ -256,7 +256,7 @@ session_start();
                         <ul class="sub">
                             <li><a  href="dropzone.html">Issue</a></li>
                             <li><a  href="sprint-plan.html">Sprint Plan</a></li>
-                            <li><a  href="todo_list.html">Calendar</a></li>
+                            <li><a  href="Schedular.html">Calendar</a></li>
                         </ul>
                     </li>
 					<li class="sub-menu">
@@ -272,7 +272,7 @@ session_start();
 			</a>
 		</li>
 		<li class="sub-menu">
-			<a href="Scheduler.html">
+			<a href="Gantt.html">
 				<i class="fa fa-tasks"></i>
 				<span>Scheduler</span>
 			</a>

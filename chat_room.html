@@ -197,16 +197,67 @@
       *********************************************************************************************************************************************************** -->
       <!--sidebar start-->
       <aside>
-<div id="sidebar" class="nav-collapse ">
-	<!-- sidebar menu start-->
-	<ul class="sidebar-menu" id="nav-accordion">
-		<p class="centered">
-			<a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a>
-		</p>
-		<h5 class="centered"><?=$email?>
-		</h5>
-		<li class="mt">
-			<a class="active" href="ManageProject.html">
+            <div id="sidebar"  class="nav-collapse ">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu" id="nav-accordion">
+                    <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+                    <h5 class="centered"><?=$email?></h5>
+                          
+                    <li class="mt">
+                        <a class="active" href="Dashboard.html">
+                            <i class="fa fa-dashboard"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+  
+                    <li class="sub-menu">
+                        <a href="javascript:;" >
+                            <i class="fa fa-desktop"></i>
+                            <span>Code</span>
+                        </a>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" >
+                            <i class="fa fa-bar-chart"></i>
+                            <span>Coding Convention</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a  href="form_component.html">Rule Setting</a></li>
+                            <li><a  href="advanced_form_components.html">Rule Docs</a></li>
+                            <li><a  href="coderesult.php">Report from Sonar</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" >
+                            <i class="fa fa-file-code-o"></i>
+                            <span>Code Review</span>
+                        </a>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" >
+                            <i class="fa fa-users"></i>
+                            <span>Account & Team</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a  href="blank.html">Edit profile</a></li>
+                            <li><a  href="login.html">Team setting</a></li>
+                            <li><a  href="lock_screen.html">Message</a></li>
+                            <li><a  href="lock_screen.html">Chat Room</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" >
+                            <i class="fa fa-cogs"></i>
+                            <span>Agile Setting</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a  href="dropzone.html">Issue</a></li>
+                            <li><a  href="sprint-plan.html">Sprint Plan</a></li>
+                            <li><a  href="Schedular.html">Calendar</a></li>
+                        </ul>
+                    </li>
+					<li class="sub-menu">
+			<a href="ManageProject.html">
 				<i class="fa fa-desktop"></i>
 				<span>ManageProject</span>
 			</a>
@@ -218,15 +269,15 @@
 			</a>
 		</li>
 		<li class="sub-menu">
-			<a href="Scheduler.html">
+			<a href="Gantt.html">
 				<i class="fa fa-tasks"></i>
 				<span>Scheduler</span>
 			</a>
 		</li>
-	</ul>
-	<!-- sidebar menu end-->
-</div>
-</aside>
+                </ul>
+                <!-- sidebar menu end-->
+            </div>
+        </aside>
       <!--sidebar end-->
       <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
