@@ -223,7 +223,7 @@
                         <ul class="sub">
                             <li><a  href="form_component.html">Rule Setting</a></li>
                             <li><a  href="advanced_form_components.html">Rule Docs</a></li>
-                            <li><a  href="form_validation.html">Report from Sonar</a></li>
+                            <li><a  href="coderesult.php">Report from Sonar</a></li>
                         </ul>
                     </li>
                     <li class="sub-menu">
@@ -323,11 +323,11 @@
 				          </div>
 				          <!-- modal -->
                           <?php
-                            $host = "localhost";
+                            $host = "styledcode.postgres.database.azure.com";
                             $port = "5432";
                             $database = "postgres";
-                            $user = "postgres";
-                            $pw = "1234";
+                            $user = "pms131@styledcode";
+                            $pw = "a12345678!";
     
                             $con = pg_connect("host=$host port=$port dbname=$database user=$user password=$pw") or die ("Could not connect to server\n"); 
 

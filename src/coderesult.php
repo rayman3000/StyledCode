@@ -2,6 +2,7 @@
     session_start();
     $email = $_SESSION['email'];
 ?>
+
 <html lang="en" style="overflow: hidden;">
 <head>
 <meta charset="utf-8">
@@ -23,26 +24,77 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-<!--Diagram includes-->
-<script type="text/javascript" src="contents_diagram/diagram.js"></script>
-<link rel="stylesheet" href="contents_diagram/diagram.css">
-<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+<style type="text/css">
+.jqstooltip { position: absolute;left: 0px;top: 0px;display: block;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;padding: 5px 5px 8px 5px;font: 10px arial, san serif;text-align: left;}
+</style>
+<style type="text/css">
+.jqstooltip { position: absolute;left: 0px;top: 0px;display: block;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;padding: 5px 5px 8px 5px;font: 10px arial, san serif;text-align: left;}
+</style>
+<style type="text/css">
+.jqstooltip { position: absolute;left: 0px;top: 0px;display: block;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;padding: 5px 5px 8px 5px;font: 10px arial, san serif;text-align: left;}
+</style>
+<!--include chart-->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var options = {
+                chart: {
+                    renderTo: 'container',
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: 'pie'
+                },
+                title: {
+                    text: 'Code Convention'
+                },
+                tooltip: {
+                    formatter: function() {
+                        return '<b>' + this.point.name + '</b>: ' + this.percentage + ' %' + '<br>  (' + this.y + '표' + ')';;
+                    }
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            color: '#000000',
+                            connectorColor: '#000000',
+                            formatter: function() {
+                                return '<b>' + this.point.name + '</b>: ' + this.percentage.toFixed(2) + ' %' + '<br>  (' + this.y + '표' + ')';
+                            }
+                        },
+                        showInLegend: true
+                    }
+                },
+                series: [{}],
 
-<link rel="stylesheet" href="contents_diagram/dhx_samples.css">
-<script type="text/javascript" src="contents_diagram/data.js"></script>
+                drilldown: {
+                    series: []
+                }
+            }
+            $.getJSON("data.php", function(json) {
+                console.log(json);
+                options.series = json;
+                chart = new Highcharts.Chart(options);
+            });
 
-<!-- end Diagram includes-->
-<style type="text/css">
-.jqstooltip { position: absolute;left: 0px;top: 0px;display: block;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;padding: 5px 5px 8px 5px;font: 10px arial, san serif;text-align: left;}
-</style>
-<style type="text/css">
-.jqstooltip { position: absolute;left: 0px;top: 0px;display: block;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;padding: 5px 5px 8px 5px;font: 10px arial, san serif;text-align: left;}
-</style>
-<style type="text/css">
-.jqstooltip { position: absolute;left: 0px;top: 0px;display: block;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;padding: 5px 5px 8px 5px;font: 10px arial, san serif;text-align: left;}
-</style>
+            $.getJSON("drilldown.php", function(json) {
+                console.log(json);
+                options.drilldown.series = json;
+                chart = new Highcharts.Chart(options);
+            });
+
+        });
+
+    </script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+<!--end include chart-->
 </head>
-<body style="">
+<body onload="init();" style="">
 
 <header class="header black-bg">
 <div class="sidebar-toggle-box">
@@ -61,7 +113,7 @@
       TOP BAR CONTENT & NOTIFICATIONS
       *********************************************************************************************************************************************************** -->
 <!--header start-->
-    <header class="header black-bg">
+     <header class="header black-bg">
               <div class="sidebar-toggle-box">
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
@@ -308,82 +360,179 @@
 <!--main content start-->
 <section id="main-content">
 <section class="wrapper site-min-height">
-<h3><i class="fa fa-angle-right"></i>Project List</h3>
+<h3><i class="fa fa-angle-right"></i>Report From Sonar</h3>
 <div class="row mt" style="overflow:scroll;">
 	<!--<div class="col-lg-12">-->
 		<!-- -- 1st ROW OF PANELS ---->
 		<!--<div class="row">-->
 			<!-- TWITTER PANEL -->
-			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
-				<div class="darkblue-panel pn">
-					<!--	<i class="fa fa-twitter fa-4x"></i> -->
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<a href="CreateProject.html"><button type="button" class="btn btn-round btn-primary" width="35">+</button></a>
-				</div>
-			</div>
+		<!--start chart-->
+		<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+    <?php
+    $host = "localhost"; 
+    $user = "postgres"; 
+    $pass = "1234"; 
+    $db = "sonar";
+    $port = "5432";
+    
+    
+    $col_count = 3;
+    $row_index = 0;
+    $message = array();
+    $severity = array();
+    $uuid = array();
+    $src = array();     //save source name
+    $dep_kee = array();
+    
+    $con = pg_connect("host=$host port=$port dbname=$db user=$user password=$pass") or die ("Could not connect to server\n"); 
+
+    $query = "SELECT severity, message, component_uuid FROM issues"; 
+    
+    $query1 = "SELECT deprecated_kee, uuid FROM projects"; 
+
+    //Make Result Table
+    
+    echo "<h4> Result Table</h4><hr>";
+    echo "<div class=\"row mb ml\">";
+    echo "<div class=\"content-panel\">";
+    echo "<div class=\"adv-table\">";
+    
+    echo "<table ccellpadding=\"0\" cellspacing=\"0\" border=\"0\" class=\"display table table-bordered\" id=\"hidden-table-info\">";
+    echo "<thead><tr>";
+    echo "<th>Severity</th>";
+    echo "<th class=\"hidden-phone\">Source Name</th>";
+    echo "<th class=\"hidden-phone\">Message</th>";
+    echo "</tr></thead><tbody>";
+    $rss = pg_query($con, $query1) or die("Cannot execute query: $query1\n");
+    
+    $j=0;
+    while ($row = pg_fetch_row($rss)) {
+        $uuid[$j] = $row[1];    //save uuid since compare 
+        $dep_kee[$j] = $row[0]; //save deprecated_kee since name of source
+        $j++;
+    }
+    
+    $i=0;
+    $rs = pg_query($con, $query) or die("Cannot execute query: $query\n");
+
+    while ($row = pg_fetch_row($rs)) {
+        $severity[$i] = $row[0];
+        $message[$i] = $row[1];
+        for($k=0; $k<$j; $k++)
+        {
+            if($row[2]==$uuid[$k])  //if kth uuid sames as now uuid
+            {
+                $src[$i] = $dep_kee[$k];    //save source name in src
+            }
+        }
+        $i++;
+    }
+    
+    $row_count = $i/3 -1;
+    $i=0;
+    
+    while($row_index < $row_count){
+        
+        $col_index = 0;
+        while($col_index < $col_count){
+            if($severity[$i]=="MAJOR")          #위험도에 따른 색깔 파랑
+                echo "<tr class=\"gradeC\">";   
+            else if($severity[$i]=="MINOR")     #초록
+                echo "<tr class=\"gradeA\">";
+            else if($severity[$i]=="BLOCKER")   #빨강
+                echo "<tr class=\"gradeX\">";
+            else                                #검정
+                echo "<tr class=\"gradeU\">";
+            echo "<td>$severity[$i]</td>";
+            echo "<td>$src[$i]</td>";
+            echo "<td>$message[$i]</td>";
+            $i++;
+            $col_index = $col_index+1;
+            echo "</tr>";
+        }
+        $row_index = $row_index + 1;
+    }
+    echo "</table>";
+    ?>
+
+        <script type="text/javascript" language="javascript" src="assets/js/advanced-datatable/media/js/jquery.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+        <script src="assets/js/jquery.scrollTo.min.js"></script>
+        <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+
+        <script type="text/javascript" language="javascript" src="assets/js/advanced-datatable/media/js/jquery.dataTables.js"></script>
+        <script type="text/javascript" src="assets/js/advanced-datatable/media/js/DT_bootstrap.js"></script>
+
+
+        <!--common script for all pages-->
+        <script src="assets/js/common-scripts.js"></script>
+
+        <!--script for this page-->
+        <script type="text/javascript">
+            /* Formating function for row details */
+            function fnFormatDetails(oTable, nTr) {
+                var aData = oTable.fnGetData(nTr);
+                var sOut = '<table cellpadding="5" cellspacing="0" border="0" >';
+                sOut += '<tr><td>Severity:</td><td>' + aData[1] + '</td></tr>';
+                sOut += '<tr><td>Source Name:</td><td>Could provide a link here</td></tr>';
+                sOut += '<tr><td>Message:</td><td>And any further details here (images etc)</td></tr>';
+                sOut += '</table>';
+
+                return sOut;
+            }
+
+            $(document).ready(function() {
+                /*
+                 * Insert a 'details' column to the table
+                 */
+                var nCloneTh = document.createElement('th');
+                var nCloneTd = document.createElement('td');
+                nCloneTd.innerHTML = '<img src="assets/js/advanced-datatable/examples/examples_support/details_open.png">';
+                nCloneTd.className = "center";
+
+                $('#hidden-table-info thead tr').each(function() {
+                    this.insertBefore(nCloneTh, this.childNodes[0]);
+                });
+
+                $('#hidden-table-info tbody tr').each(function() {
+                    this.insertBefore(nCloneTd.cloneNode(true), this.childNodes[0]);
+                });
+
+                /*
+                 * Initialse DataTables, with no sorting on the 'details' column
+                 */
+                var oTable = $('#hidden-table-info').dataTable({
+                    "aoColumnDefs": [{
+                        "bSortable": false,
+                        "aTargets": [0]
+                    }],
+                    "aaSorting": [
+                        [1, 'asc']
+                    ]
+                });
+
+                /* Add event listener for opening and closing details
+                 * Note that the indicator for showing which row is open is not controlled by DataTables,
+                 * rather it is done here
+                 */
+                $('#hidden-table-info tbody td img').live('click', function() {
+                    var nTr = $(this).parents('tr')[0];
+                    if (oTable.fnIsOpen(nTr)) {
+                        /* This row is already open - close it */
+                        this.src = "assets/js/advanced-datatable/examples/examples_support/details_open.png";
+                        oTable.fnClose(nTr);
+                    } else {
+                        /* Open this row */
+                        this.src = "assets/js/advanced-datatable/examples/examples_support/details_close.png";
+                        oTable.fnOpen(nTr, fnFormatDetails(oTable, nTr), 'details');
+                    }
+                });
+            });
+
+        </script>
+		<!--end chart-->
     <!--</div>-->
-<?php
-$host = "styledcode.postgres.database.azure.com";
-$port = "5432";
-$database = "postgres";
-$user = "pms131@styledcode";
-$pw = "a12345678!";
-
-$con = pg_connect("host=$host port=$port dbname=$database user=$user password=$pw") or die ("Could not connect to server\n");
-
-$query = "SELECT * FROM userprojects,projects WHERE userprojects.email = '" . $email . "' AND userprojects.projectnum = projects.seq";
-$result = pg_query($con, $query);
-while($row = pg_fetch_array($result))
-{
-    echo '	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">' .
-				'<div class="steps pn">' .
-					'<input id="op" name="op1" type="checkbox"/>' .
-					'<label for="op1">Project Name : ' . $row[4] . '</label>' .
-					'<input id="op2" name="op2" type="checkbox" aria-hidden="true" data-toggle="modal" data-target="#diagramModal"/>' .
-					'<label for="op2">Project Participants</label>' .
-					'<input id="op3" name="op3" type="checkbox" aria-hidden="true" data-toggle="modal" data-target="#myModal"/>' .
-					'<label for="op3">Deletion</label>' .
-					'<input type="submit" value="Load Project" id="submit" onclick="location.href="ReadProject.html";"/>' .
-				'</div><br><br>' .
-				
-				'<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">' .
-					'<div class="modal-dialog">' .
-						'<div class="modal-content">' .
-							'<div class="modal-header">' .
-								'<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>' .
-								'<h4 class="modal-title" id="myModalLabel">Project Deletion</h4>' .
-							'</div>' .
-							'<div class="modal-body">' .
-								'프로젝트를 삭제하시겠습니까?' .
-							'</div>' .
-							'<div class="modal-footer">' .
-								'<button type="button" class="btn btn-default" data-dismiss="modal">Delete</button>' .
-								'<button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Cancel</button>' .
-							'</div>' .
-						'</div>' .
-					'</div>' .
-				'</div>' .
-				'<div class="modal fade" id="diagramModal" tabindex="-1" rold="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">' .
-					'<div class="modal-dialog">' .
-						'<div class="modal-content"">' .
-							'<div class="modal-header">' .
-								'<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>' .
-								'<h4 class="modal-title" id="myModalLabel">Project Participants</h4>' .
-							'</div>' .
-							'<div class="modal-body">' .
-								'<div id="diagram_container"></div>' .
-							'</div>' .
-						'</div>' .
-					'</div>' .
-				'</div>' .
-			'</div>';
-}
-?>
 <!-- --/col-md-4 ---->
 </div>
 </section>
@@ -439,46 +588,6 @@ while($row = pg_fetch_array($result))
           $('select.styled').customSelect();
       });
   </script>
-  <script>
-  var smallOrganogramData = [
-	{
-		id: "1",
-		text: "참여도 : 5",
-		title: "DSA",
-		img: "contents_diagram/img/ui-sam.jpg"
-	},
-	{
-		id: "2",
-		text: "참여도 : 5",
-		title: "Mildred Kim",
-		img: "contents_diagram/img/avatar-2.png"
-	},
-	{
-		id: "3",
-		text: "참여도 : 8",
-		title: "Jerry Wagner",
-		img: "contents_diagram/img/avatar-3.png"
-	},
-	{
-		id: "2.1",
-		text: "참여도 : 2",
-		title: "Charles Little",
-		img: "contents_diagram/img/avatar-4.png"
-	},
-	{
-		id: "3.1",
-		text: "참여도 : 12 ",
-		title: "Jonathan Lane",
-		img: "contents_diagram/img/avatar-5.png"
-	},
-	{ id: "1-2", from: "1", to: "2", type: "line" },
-	{ id: "1-3", from: "1", to: "3", type: "line" },
-	{ id: "2-2.1", from: "2", to: "2.1", type: "line" },
-	{ id: "3-3.1", from: "3", to: "3.1", type: "line" },
-];
-		var diagram = new dhx.Diagram("diagram_container", { type: "org", defaultShapeType: "img-card" });
-		diagram.parse(smallOrganogramData);
-	</script>
     
 </body>
 </html>

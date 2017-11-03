@@ -1,9 +1,9 @@
 <?php
-    $host = "localhost";
+    $host = "styledcode.postgres.database.azure.com";
     $port = "5432";
     $database = "postgres";
-    $user = "postgres";
-    $pw = "1234";
+    $user = "pms131@styledcode";
+    $pw = "a12345678!";
     
     $con = pg_connect("host=$host port=$port dbname=$database user=$user password=$pw") or die ("Could not connect to server\n"); 
     

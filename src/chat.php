@@ -227,7 +227,7 @@ session_start();
                         <ul class="sub">
                             <li><a  href="form_component.html">Rule Setting</a></li>
                             <li><a  href="advanced_form_components.html">Rule Docs</a></li>
-                            <li><a  href="form_validation.html">Report from Sonar</a></li>
+                            <li><a  href="coderesult.php">Report from Sonar</a></li>
                         </ul>
                     </li>
                     <li class="sub-menu">
