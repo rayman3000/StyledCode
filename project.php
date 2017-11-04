@@ -1,11 +1,11 @@
 <?php
 Header("Location:ManageProject.html") ; 
 
-$host = "styledcode.postgres.database.azure.com";     
-$port = "5432";
-$user = "pms131@styledcode"; 
-$pass = "a12345678!"; 
-$db = "postgres"; 
+$host = "styledcode-postgresqldbserver.postgres.database.azure.com";
+    $port = "5432";
+    $database = "styledcode_temp";
+    $user = "bulgogi1216@styledcode-postgresqldbserver";
+    $pw = "seong!UK$91";
 $con = pg_connect("host=$host port = $port dbname=$db user=$user password=$pass") or die ("Could not connect to server\n"); 
 
 session_start();

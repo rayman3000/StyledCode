@@ -200,10 +200,11 @@
 </html>
 
 <?php
-$host = "localhost"; 
-$user = "postgres"; 
-$pass = "1234"; 
-$db = "teamproject"; 
+$host = "styledcode-postgresqldbserver.postgres.database.azure.com";
+    $port = "5432";
+    $database = "styledcode_temp";
+    $user = "bulgogi1216@styledcode-postgresqldbserver";
+    $pw = "seong!UK$91";
 $con = pg_connect("host=$host dbname=$db user=$user password=$pass") or die ("Could not connect to server\n"); 
 
 $query = "INSERT INTO teamproject VALUES ('$_POST[team]','$_POST[project]', '$_POST[category]','$_POST[dateRange]')";  

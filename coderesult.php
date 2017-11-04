@@ -402,12 +402,11 @@
                     <!--start chart-->
                     <div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
                     <?php
-    $host = "styledcode-postgresqldbserver.postgres.database.azure.com"; 
-    $user = "bulgogi1216@styledcode-postgresqldbserver"; 
-    $pass = "seong!UK$91"; 
-    $db = "styledcode_postgresqldb";
+    $host = "styledcode-postgresqldbserver.postgres.database.azure.com";
     $port = "5432";
-    
+    $database = "styledcode_temp";
+    $user = "bulgogi1216@styledcode-postgresqldbserver";
+    $pw = "seong!UK$91";
     
     $col_count = 3;
     $row_index = 0;
