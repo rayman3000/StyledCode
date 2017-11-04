@@ -1,9 +1,9 @@
 <?php
-    $host = "styledcode-postgresqldbserver.postgres.database.azure.com";
+    $host = "azure";
     $port = "5432";
-    $database = "styledcode_temp";
-    $user = "bulgogi1216@styledcode-postgresqldbserver";
-    $pw = "seong!UK$91";
+    $database = "postgres";
+    $user = "pms131@styledcode";
+    $pw = "a12345678!";
     
     $roomnum = $_POST['roomnum'];
     $roomname =  $_POST['roomname'];
