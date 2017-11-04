@@ -1,5 +1,5 @@
 <?php
-    $host = "azure";
+    $host = "styledcode.postgres.database.azure.com";
     $port = "5432";
     $database = "postgres";
     $user = "pms131@styledcode";
